@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search for various movies for free.</title> 
+  <link rel = "stylesheet" href = "style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <script defer src = "index.js"></script>
+</head>
+<body>
+  <div class = "container">
+    <header>
+      <h2 class = "header-title">Find Your Movie</h2>
+      <p class = "header-text"><a href = "watchlist.html" class = "links">My WatchList</a></p>
+    </header>
+    <form>
+      <span class = "input-div">
+        <button class = "search-btn">
+          <img htmlFor = "input" class = "search-icon" src = "./images/icon.png" alt = "search icon"/>
+        </button>
+        <input id = "input" name = "input" type = "text"  placeholder = "Search For A Movie" class = "input-field"/>
+      </span>
+      <button class = "btn">Search</button>
+    </form>
+
+    <main id = "main">
+     <div class = "movie-box-div">
+      <img src = "./images/Movie box Icon.png" alt = "movie-box-icon"/>
+      <p class = "movie-box-div-text">Start exploring</p>
+     </div>
+   
+      <!-- <div class = "movie-container">
+        <div class = "film-img-div">
+          <img class = "film" src = "./images/blade runner.png" alt = "Blade runner movie thumbnail"/>
+        </div>
+
+        <div class = "film-text-div">
+          <h3 class = "film-title">Blade Runner <img class = "rating-img" src = "./images/star icon.png" alt = "rating star image"/> <span class = "rate-text">8.1</span></h3>
+          <p class = "film-text-one"> 
+            <span class = "genre-time">116 min</span> 
+            <span class = "genre-text">Drama, Mystery, Sci-fi</span>
+            <span class = "genre-icon"><img class = "watchlist-icon" src = "./images/watchlist icon.png" alt = "Watchlist icon"/></span> <span>Watchlist</span>
+          </p>
+
+          <p class = "film-text-two">
+           A blade runner must pursue an terminate four
+           replicants who stole a ship in space, and have
+           returned to Earth to find ther creator.
+          </p>
+        </div>
+      </div> -->
+      <!--<hr></hr>--> 
+    </main>
+
+  </div>
+</body>
+</html>

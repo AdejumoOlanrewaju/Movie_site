@@ -1,0 +1,271 @@
+*{
+  box-sizing : border-box;
+}
+
+body{
+  margin : 0;
+  padding : 0;
+  background-color : #1C1C1C;
+  font-family : 'inter', sans-serif;
+}
+
+h1,
+h2,
+h3{
+  margin : 0;
+}
+
+.container{
+  width : 100%;
+  max-width : 800px;
+  margin: 0 auto;
+  background-color : #121212;
+  height : 100vh;
+}
+
+header{
+  background-image : url("./images/movie background.jpg"), linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.9));
+  background-blend-mode: darken;
+  background-repeat : no-repeat;
+  background-size : cover;
+  width : 100%;
+  height : 230px;
+  padding : 20px 10px;
+  display : flex;
+  align-items : center;
+  justify-content : space-around;
+  color : white;
+  text-align : center;
+}
+
+@media(max-width : 600px){
+  header{
+    flex-direction : column;
+    justify-content: space-around;
+    align-items : center
+  }
+}
+
+.header-title{
+  font-size : 2.5rem;
+  font-weight : 900;
+  margin: 0px 15px 0px 10px;
+  /* text-align: center; */
+}
+
+@media(max-width : 400px){
+  .header-title{
+    white-space : wrap;
+    font-size : 2.25rem;
+  }
+}
+.links{
+  color : white;
+  text-decoration : none;
+  font-size : 17px;
+  display : block;
+  padding-bottom : 10px;
+}
+
+img {
+  max-width : 100%;
+}
+
+form{
+  width : 90%;
+  max-width: 600px;
+  margin : -20px auto 0 auto;
+  display : flex;
+}
+
+.input-div{
+  width : 100%;
+  display : flex;
+}
+
+.input-field{
+  width : 100%;
+  display : block;
+  position : relative;
+  outline : none;
+  font-size: 18px;
+  font-family : 'inter', sans-serif;
+  border : none;
+  background : #2E2E2F;
+  color : whitesmoke;
+  padding : 15px 10px;
+}
+
+
+.search-btn{
+  padding : 10px 20px;
+  cursor : pointer;
+  border : none;
+  border-bottom-left-radius : 5px;
+  border-top-left-radius : 5px;
+  background : #2E2E2F;
+}
+
+.btn{
+  display : block;
+  font-family : 'inter', sans-serif;
+  font-size: 17px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius : 5px;
+  border : none;
+  background : #4B4B4B;
+  cursor : pointer;
+  padding: .5rem;
+}
+
+.btn:active{
+  background : #8f8b8b;
+}
+
+main{
+  width: 100%;
+  background: #121212;
+  position: relative;
+  padding: 20px;
+  font-weight: 400;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+}
+
+
+/*styles for home page before movie search*/
+.movie-box-div{
+  display : flex;
+  flex-direction : column;
+  justify-content : center;
+  align-items : center;
+  margin-top : 30px;
+}
+
+.movie-box-div-text{
+  color : #2E2E2E;
+  font-size : 20px;
+  text-align : center;
+}
+/*ends here*/
+
+.movie-Kit{
+  background: rgba(0,0,0,.8);
+  padding: 1.4rem 1rem;
+  color: black;
+  border-radius : 10px;
+}
+
+.film-img-div{
+  width: 99px;
+  height: 150px;
+  margin-left: 20px;
+  min-width: 99px;
+}
+
+.film-text-div{
+  margin-left : 20px;
+  color : white;
+  width: 40ch;
+  line-height : 1.7;
+}
+
+.film{
+  width: 100%;
+  border-radius: 5px;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+
+.movie-container{
+  display : flex;
+  justify-content : space-evenly;
+}
+
+.rate-text{
+  font-size : .8em;
+}
+
+.film-title{
+  font-weight : 300;
+}
+
+.film-text-one{
+  margin : 0px;
+}
+
+.film-text-two{
+  color: #A5A5A5;
+  margin: 15px auto 0px;
+  width: 90%;
+  line-height: 1.6;
+}
+
+/* .genre-time{
+  margin-right : 18px;
+} */
+
+.genre-text{
+  margin-right : 19px;
+}
+
+
+.genre-icon{
+  margin-top: 4px;
+  margin-right: 4px;
+  width: 20px;
+  height : 20px;
+  background-image: url("./images/watchlist icon.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius : 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.genre-icon:active{
+  transform : scale(1.4);
+}
+
+.list-icon{
+  margin-top: 10px;
+  margin-right: 4px;
+  width: 30px;
+  height : 30px;
+  background-image: url("./images/remove icon2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius : 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.list-icon:active{
+  transform : scale(1.4);
+}
+
+.flex-text{
+  display : flex;
+  color : white;
+  gap : 5px;
+}
+
+.flex-text p{
+  margin-top : 0;
+}
+
+.link-icon{
+  cursor: pointer;
+}
+
+/* @media(max-width : 500px){
+  form{
+    margin-inline : 0;
+  }
+} */
