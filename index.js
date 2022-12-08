@@ -2,13 +2,14 @@ let Main = document.getElementById("main")
 let wMain = document.getElementById("wmain")
 let searchBtn = document.querySelector(".btn")
 let inputField = document.getElementById("input")
+let loadingAnim = document.querySelector(".loading")
 let apiKey = "7000c1a5"
 let html = ""
 let watchlisthtml = ""
 let moviesArr = []
 let watchlistArr = []
 let watchliststore = []
-
+let load = true
 watchliststore = JSON.parse(localStorage.getItem("watchlistArr"))
 
 if(watchliststore){
@@ -43,8 +44,16 @@ if(Main){
 
 
  async function getMovie(){
+  load = true
+  if(load){
+    loadingAnim.style.display = "block"
+  }
   let response = await fetch(`https://www.omdbapi.com/?apikey=${apiKey}&s=${inputField.value}`)
   let data = await response.json()
+  load = false
+    if(!load){
+      loadingAnim.style.display = "none"
+    }
   console.log(data)
   if(data.Response === "False"){
     Main.innerHTML = `

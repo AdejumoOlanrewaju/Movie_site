@@ -152,7 +152,7 @@ main{
 
 .movie-Kit{
   background: rgba(0,0,0,.8);
-  padding: 1.4rem 1rem;
+  padding: 1.4rem .5rem;
   color: black;
   border-radius : 10px;
 }
@@ -262,6 +262,25 @@ main{
 
 .link-icon{
   cursor: pointer;
+}
+
+.loading {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 8px solid rgba(0, 0, 0, 0.9);
+  border-top-color: rgba(255,255,255,.5);
+  animation: load .7s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  margin: 100px auto 0;
+  display : none
+}
+
+@keyframes load{
+   to{
+        transform : rotate(360deg);
+   }
 }
 
 /* @media(max-width : 500px){
